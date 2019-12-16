@@ -1,5 +1,5 @@
 //
-//  ZPLAYAdsAdMobAdapter.h
+//  AtmosplayAdsRewardedVideoAdapter.h
 //  PlayableAdMobDemo
 //
 //  Created by lgd on 2017/12/7.
@@ -9,13 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <GoogleMobileAds/Mediation/GADMRewardBasedVideoAdNetworkConnectorProtocol.h>
 #import <GoogleMobileAds/Mediation/GADMRewardBasedVideoAdNetworkAdapterProtocol.h>
-#import <PlayableAds/PlayableAds.h>
+#import <AtmosplayAds/AtmosplayRewardedVideo.h>
 
 @import GoogleMobileAds;
-
-@interface ZPLAYAdsAdMobAdapter : NSObject<GADMRewardBasedVideoAdNetworkAdapter, PlayableAdsDelegate> {
+@interface AtmosplayAdsRewardedVideoAdapter : NSObject<GADMRewardBasedVideoAdNetworkAdapter, AtmosplayRewardedVideoDelegate> {
 }
-@property(nonatomic, strong) PlayableAds *pAd;
+@property(nonatomic, strong) AtmosplayRewardedVideo *pAd;
 @property(nonatomic, strong) id<GADMRewardBasedVideoAdNetworkConnector> rewardedConnector;
 
 @end

@@ -1,15 +1,15 @@
 //
-//  ZPLAYAdsAdMobInterstitialAdapter.m
+//  AtmosplayAdsInterstitialAdapter.m
 //  PlayableAdMobDemo
 //
 //  Created by lgd on 2018/4/19.
 //  Copyright © 2018年 playable. All rights reserved.
 //
 
-#import "ZPLAYAdsAdMobInterstitialAdapter.h"
+#import "AtmosplayAdsInterstitialAdapter.h"
 
 static NSString *const customEventErrorDomain = @"com.google.CustomEvent";
-@implementation ZPLAYAdsAdMobInterstitialAdapter
+@implementation AtmosplayAdsInterstitialAdapter
 @synthesize delegate;
 
 - (void)requestInterstitialAdWithParameter:(NSString *GAD_NULLABLE_TYPE)serverParameter
@@ -20,7 +20,7 @@ static NSString *const customEventErrorDomain = @"com.google.CustomEvent";
     NSString *AppID = paramterDict[@"AppID"];
     NSString *AdUnitID = paramterDict[@"AdUnitID"];
     
-    self.pAd = [[PlayableAds alloc] initWithAdUnitID:AdUnitID appID:AppID];
+    self.pAd = [[AtmosplayInterstitial alloc] initWithAppID:AppID AdUnitID:AdUnitID];
     self.pAd.delegate = self;
     self.pAd.autoLoad = NO;
     [self.pAd loadAd];
@@ -28,9 +28,9 @@ static NSString *const customEventErrorDomain = @"com.google.CustomEvent";
 
 - (void)presentFromRootViewController:(UIViewController *)rootViewController {
     if (self.pAd.ready) {
-        [self.pAd present];
+        [self.pAd showInterstitialWithViewController:rootViewController];
     } else {
-        NSLog(@"ZPLAYAds interstitial not ready");
+        NSLog(@"Atmosplay interstitial not ready");
     }
 }
 
@@ -51,41 +51,48 @@ static NSString *const customEventErrorDomain = @"com.google.CustomEvent";
     return dic;
 }
 
-#pragma mark - PlayableAdsDelegate
-- (void)playableAdsDidLoad:(PlayableAds *)ads {
+#pragma mark - AtmosplayInterstitialDelegate
+/// Tells the delegate that succeeded to load ad.
+- (void)atmosplayInterstitialDidLoad:(AtmosplayInterstitial *)ads {
     [self.delegate customEventInterstitialDidReceiveAd:self];
-    NSLog(@"zp=> customEventInterstitialDidReceiveAd");
+    NSLog(@"Atmosplay=> customEventInterstitialDidReceiveAd");
 }
 
-- (void)playableAds:(PlayableAds *)ads didFailToLoadWithError:(NSError *)error {
+/// Tells the delegate that failed to load ad.
+- (void)atmosplayInterstitial:(AtmosplayInterstitial *)ads didFailToLoadWithError:(NSError *)error {
     NSError *e = [NSError errorWithDomain:customEventErrorDomain
                                          code:-1
                                      userInfo:nil];
     [self.delegate customEventInterstitial:self didFailAd:e];
-    NSLog(@"zp=> didFailToLoadRewardBasedVideoAdwithError: %@", [error description]);
+    NSLog(@"Atmosplay=> didFailToLoadWithError: %@", [error description]);
 }
 
-- (void)playableAdsDidRewardUser:(PlayableAds *)ads {
-}
-
-- (void)playableAdsDidDismissScreen:(PlayableAds *)ads {
-    [self.delegate customEventInterstitialDidDismiss:self];
-}
-
-- (void)playableAdsDidStartPlaying:(PlayableAds *)ads {
+/// Tells the delegate that user starts playing the ad.
+- (void)atmosplayInterstitialDidStartPlaying:(AtmosplayInterstitial *)ads {
     [self.delegate customEventInterstitialWillPresent:self];
-    NSLog(@"zp=> adapterDidStartPlayingRewardBasedVideoAd");
+    NSLog(@"Atmosplay=> customEventInterstitialWillPresent");
 }
 
-- (void)playableAdsDidEndPlaying:(PlayableAds *)ads {
-}
-
-- (void)playableAdsDidPresentLandingPage:(PlayableAds *)ads{
+/// Tells the delegate that the ad is being fully played.
+- (void)atmosplayInterstitialDidEndPlaying:(AtmosplayInterstitial *)ads {
     
 }
 
-- (void)playableAdsDidClick:(PlayableAds *)ads{
+/// Tells the delegate that the landing page did present on the screen.
+- (void)atmosplayInterstitialDidPresentLandingPage:(AtmosplayInterstitial *)ads {
+    
+}
+
+/// Tells the delegate that the ad did animate off the screen.
+- (void)atmosplayInterstitialDidDismissScreen:(AtmosplayInterstitial *)ads {
+    [self.delegate customEventInterstitialDidDismiss:self];
+    NSLog(@"Atmosplay=> customEventInterstitialDidDismiss");
+}
+
+/// Tells the delegate that the ad is clicked
+- (void)atmosplayInterstitialDidClick:(AtmosplayInterstitial *)ads {
     [self.delegate customEventInterstitialWasClicked:self];
+    NSLog(@"Atmosplay=> customEventInterstitialWasClicked");
 }
 
 @end
