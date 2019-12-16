@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.source = {:git => 'https://github.com/Atmosplay/AdMobAdapter-AtmosplayAds-iOS.git', :tag => s.version.to_s}
   s.source_files = 'PlayableAdMobDemo/Adapters/*.{h,m}'
   s.ios.deployment_target = '9.0'
-  s.dependency 'PlayableAds', '~> 3.0.0'
+  s.dependency 'AtmosplayAds', '~> 3.0.0'
   s.dependency 'Google-Mobile-Ads-SDK'
   s.static_framework = true
 end
