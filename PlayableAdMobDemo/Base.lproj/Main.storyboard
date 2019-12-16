@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ZPLAYAds-->
+        <!--AtmosplayAds-->
         <scene sceneID="0R3-8I-XHt">
             <objects>
                 <viewController id="981-Hf-uwO" customClass="MainViewController" sceneMemberID="viewController">
@@ -55,7 +55,7 @@
                             <constraint firstItem="bQT-yE-kUg" firstAttribute="top" secondItem="LAb-Lb-9QL" secondAttribute="bottom" constant="8" id="yHr-qg-FtO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="ZPLAYAds" id="LFU-Lf-xFN"/>
+                    <navigationItem key="navigationItem" title="AtmosplayAds" id="LFU-Lf-xFN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nal-Jc-YIx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
