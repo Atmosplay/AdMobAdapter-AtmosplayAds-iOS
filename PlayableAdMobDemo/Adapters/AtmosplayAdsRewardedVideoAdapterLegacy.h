@@ -1,5 +1,5 @@
 //
-//  AtmosplayAdsRewardedVideoAdapter.h
+//  AtmosplayAdsRewardedVideoAdapterLegacy.h
 //  PlayableAdMobDemo
 //
 //  Created by lgd on 2017/12/7.
@@ -12,7 +12,7 @@
 #import <AtmosplayAds/AtmosplayRewardedVideo.h>
 
 @import GoogleMobileAds;
-@interface AtmosplayAdsRewardedVideoAdapter : NSObject<GADMRewardBasedVideoAdNetworkAdapter, AtmosplayRewardedVideoDelegate> {
+@interface AtmosplayAdsRewardedVideoAdapterLegacy : NSObject<GADMRewardBasedVideoAdNetworkAdapter, AtmosplayRewardedVideoDelegate> {
 }
 @property(nonatomic, strong) AtmosplayRewardedVideo *pAd;
 @property(nonatomic, strong) id<GADMRewardBasedVideoAdNetworkConnector> rewardedConnector;

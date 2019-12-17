@@ -1,14 +1,14 @@
 //
-//  AtmosplayAdsRewardedVideoAdapter.m
+//  AtmosplayAdsRewardedVideoAdapterLegacy.m
 //  PlayableAdMobDemo
 //
 //  Created by lgd on 2017/12/7.
 //  Copyright © 2017年 playable. All rights reserved.
 //
 
-#import "AtmosplayAdsRewardedVideoAdapter.h"
+#import "AtmosplayAdsRewardedVideoAdapterLegacy.h"
 
-@implementation AtmosplayAdsRewardedVideoAdapter
+@implementation AtmosplayAdsRewardedVideoAdapterLegacy
 
 - (instancetype)initWithRewardBasedVideoAdNetworkConnector: (id<GADMRewardBasedVideoAdNetworkConnector>)connector {
     if (!connector) {
