@@ -34,7 +34,7 @@
     [self sendToLog:@"start loading ad"];
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     [[GADRewardBasedVideoAd sharedInstance] loadRequest:[GADRequest request]
-                                           withAdUnitID:@"ca-app-pub-5451364651863658/5455468949"];
+                                           withAdUnitID:@"ca-app-pub-9454875840803246/5588639307"];
 }
 
 - (IBAction)presentAd:(UIButton *)sender {
