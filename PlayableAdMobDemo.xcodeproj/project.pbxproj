@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		54ECA882011A1FBCEDDC61E3 /* libPods-PlayableAdMobDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7D90506701616292AF5305 /* libPods-PlayableAdMobDemo.a */; };
-		5B40FDCA2369745E002116BA /* RewardedVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B40FDC22369745E002116BA /* RewardedVideoViewController.m */; };
+		5B40FDCA2369745E002116BA /* RewardedVideoViewControllerLegacy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B40FDC22369745E002116BA /* RewardedVideoViewControllerLegacy.m */; };
 		5B40FDCB2369745E002116BA /* InterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B40FDC42369745E002116BA /* InterstitialViewController.m */; };
 		5B40FDCC2369745E002116BA /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B40FDC62369745E002116BA /* BannerViewController.m */; };
 		C72AD3CB1FD8E6CA0000ADDA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C72AD3CA1FD8E6CA0000ADDA /* AppDelegate.m */; };
@@ -21,8 +21,8 @@
 
 /* Begin PBXFileReference section */
 		55A1A6376D176D558A02BF05 /* Pods-PlayableAdMobDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayableAdMobDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlayableAdMobDemo/Pods-PlayableAdMobDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		5B40FDC22369745E002116BA /* RewardedVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardedVideoViewController.m; sourceTree = "<group>"; };
-		5B40FDC32369745E002116BA /* RewardedVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardedVideoViewController.h; sourceTree = "<group>"; };
+		5B40FDC22369745E002116BA /* RewardedVideoViewControllerLegacy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardedVideoViewControllerLegacy.m; sourceTree = "<group>"; };
+		5B40FDC32369745E002116BA /* RewardedVideoViewControllerLegacy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardedVideoViewControllerLegacy.h; sourceTree = "<group>"; };
 		5B40FDC42369745E002116BA /* InterstitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterstitialViewController.m; sourceTree = "<group>"; };
 		5B40FDC52369745E002116BA /* BannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerViewController.h; sourceTree = "<group>"; };
 		5B40FDC62369745E002116BA /* BannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerViewController.m; sourceTree = "<group>"; };
@@ -87,8 +87,8 @@
 				5B40FDC62369745E002116BA /* BannerViewController.m */,
 				5B40FDC82369745E002116BA /* InterstitialViewController.h */,
 				5B40FDC42369745E002116BA /* InterstitialViewController.m */,
-				5B40FDC32369745E002116BA /* RewardedVideoViewController.h */,
-				5B40FDC22369745E002116BA /* RewardedVideoViewController.m */,
+				5B40FDC32369745E002116BA /* RewardedVideoViewControllerLegacy.h */,
+				5B40FDC22369745E002116BA /* RewardedVideoViewControllerLegacy.m */,
 				C72AD3C91FD8E6CA0000ADDA /* AppDelegate.h */,
 				C72AD3CA1FD8E6CA0000ADDA /* AppDelegate.m */,
 				C77A98B720887E8400840186 /* MainViewController.h */,
@@ -222,7 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B40FDCA2369745E002116BA /* RewardedVideoViewController.m in Sources */,
+				5B40FDCA2369745E002116BA /* RewardedVideoViewControllerLegacy.m in Sources */,
 				C77A98B920887E8400840186 /* MainViewController.m in Sources */,
 				5B40FDCC2369745E002116BA /* BannerViewController.m in Sources */,
 				5B40FDCB2369745E002116BA /* InterstitialViewController.m in Sources */,
