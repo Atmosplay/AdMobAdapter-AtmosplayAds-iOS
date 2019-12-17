@@ -7,13 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <AtmosplayAds/AtmosplayInterstitial.h>
 
 @import GoogleMobileAds;
-
-@interface AtmosplayAdsInterstitialAdapter : NSObject<GADCustomEventInterstitial, AtmosplayInterstitialDelegate>{
-}
-
-@property(nonatomic) AtmosplayInterstitial *pAd;
+@interface AtmosplayAdsInterstitialAdapter : NSObject<GADCustomEventInterstitial>
 
 @end

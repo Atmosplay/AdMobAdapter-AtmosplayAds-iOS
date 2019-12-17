@@ -7,35 +7,40 @@
 //
 
 #import "AtmosplayAdsInterstitialAdapter.h"
+#import <AtmosplayAds/AtmosplayInterstitial.h>
 
-static NSString *const customEventErrorDomain = @"com.google.CustomEvent";
+@interface AtmosplayAdsInterstitialAdapter ()<AtmosplayInterstitialDelegate>
+@property(nonatomic) AtmosplayInterstitial *interstitial;
+
+@end
+
 @implementation AtmosplayAdsInterstitialAdapter
 @synthesize delegate;
-
 - (void)requestInterstitialAdWithParameter:(NSString *GAD_NULLABLE_TYPE)serverParameter
                                      label:(NSString *GAD_NULLABLE_TYPE)serverLabel
                                    request:(GADCustomEventRequest *)request {
-    NSDictionary *paramterDict = [self dictionaryWithJsonString:serverParameter];
-    NSCAssert(paramterDict, @"Yumi paramter is invalid，please check yumi adapter config");
+    NSDictionary *paramterDict = [self getCustomParametersFromServerParameter:serverParameter];
+    NSCAssert(paramterDict, @"paramter is invalid，please check adapter config");
     NSString *AppID = paramterDict[@"AppID"];
     NSString *AdUnitID = paramterDict[@"AdUnitID"];
     
-    self.pAd = [[AtmosplayInterstitial alloc] initWithAppID:AppID AdUnitID:AdUnitID];
-    self.pAd.delegate = self;
-    self.pAd.autoLoad = NO;
-    [self.pAd loadAd];
+    self.interstitial = [[AtmosplayInterstitial alloc] initWithAppID:AppID
+                                                            AdUnitID:AdUnitID];
+    self.interstitial.delegate = self;
+    self.interstitial.autoLoad = NO;
+    [self.interstitial loadAd];
 }
 
 - (void)presentFromRootViewController:(UIViewController *)rootViewController {
-    if (self.pAd.ready) {
-        [self.pAd showInterstitialWithViewController:rootViewController];
+    if (self.interstitial.isReady) {
+        [self.interstitial showInterstitialWithViewController:rootViewController];
     } else {
         NSLog(@"Atmosplay interstitial not ready");
     }
 }
 
 #pragma mark: private
-- (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString {
+- (NSDictionary *)getCustomParametersFromServerParameter:(NSString *)jsonString {
     if (jsonString == nil) {
         return nil;
     }
@@ -60,10 +65,7 @@ static NSString *const customEventErrorDomain = @"com.google.CustomEvent";
 
 /// Tells the delegate that failed to load ad.
 - (void)atmosplayInterstitial:(AtmosplayInterstitial *)ads didFailToLoadWithError:(NSError *)error {
-    NSError *e = [NSError errorWithDomain:customEventErrorDomain
-                                         code:-1
-                                     userInfo:nil];
-    [self.delegate customEventInterstitial:self didFailAd:e];
+    [self.delegate customEventInterstitial:self didFailAd:error];
     NSLog(@"Atmosplay=> didFailToLoadWithError: %@", [error description]);
 }
 
