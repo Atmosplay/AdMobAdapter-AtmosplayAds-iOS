@@ -16,16 +16,20 @@
 
 @implementation AtmosplayAdsBannerAdapter
 @synthesize delegate;
-- (void)requestBannerAd:(GADAdSize)adSize parameter:(nullable NSString *)serverParameter label:(nullable NSString *)serverLabel request:(nonnull GADCustomEventRequest *)request {
+- (void)requestBannerAd:(GADAdSize)adSize
+              parameter:(nullable NSString *)serverParameter
+                  label:(nullable NSString *)serverLabel
+                request:(nonnull GADCustomEventRequest *)request {
     
-    NSDictionary *paramterDict = [self dictionaryWithJsonString:serverParameter];
+    NSDictionary *paramterDict = [self getCustomParametersFromServerParameter:serverParameter];
     NSCAssert(paramterDict, @"paramter is invalid，please check adapter config");
     NSString *AppID = paramterDict[@"AppID"];
     NSString *AdUnitID = paramterDict[@"AdUnitID"];
 
-    self.bannerView = [[AtmosplayBanner alloc] initWithAppID:AppID adUnitID:AdUnitID rootViewController:[self.delegate viewControllerForPresentingModalView]];
+    self.bannerView = [[AtmosplayBanner alloc] initWithAppID:AppID
+                                                    adUnitID:AdUnitID
+                                          rootViewController:[self.delegate viewControllerForPresentingModalView]];
     self.bannerView.delegate = self;
-    
     self.bannerView.bannerSize = kAtmosplayBanner320x50;
     if (GADAdSizeEqualToSize(adSize, kGADAdSizeLeaderboard)) {
         self.bannerView.bannerSize = kAtmosplayBanner728x90;
@@ -39,7 +43,7 @@
 }
 
 #pragma mark: private
-- (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString {
+- (NSDictionary *)getCustomParametersFromServerParameter:(NSString *)jsonString {
     if (jsonString == nil) {
         return nil;
     }
