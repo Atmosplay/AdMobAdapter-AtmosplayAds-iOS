@@ -17,17 +17,18 @@
 
 @implementation RewardedVideoController
 - (GADRewardedAd *)createAndLoadRewardedAd {
-  GADRewardedAd *rewardedAd = [[GADRewardedAd alloc]
-      initWithAdUnitID:@"ca-app-pub-9454875840803246/5588639307"];
-  GADRequest *request = [GADRequest request];
-  [rewardedAd loadRequest:request completionHandler:^(GADRequestError * _Nullable error) {
-    if (error) {
-      // Handle ad failed to load case.
-        [self sendToLog:@"fail to load"];
-    } else {
-      // Ad successfully loaded.
-        [self sendToLog:@"successfull loaded"];
-    }
+    GADRewardedAd *rewardedAd = [[GADRewardedAd alloc]
+                                 initWithAdUnitID:@"ca-app-pub-9454875840803246/5588639307"];
+    GADRequest *request = [GADRequest request];
+    __weak __typeof(self)weakSelf = self;
+    [rewardedAd loadRequest:request completionHandler:^(GADRequestError * _Nullable error) {
+        if (error) {
+            // Handle ad failed to load case.
+            [weakSelf sendToLog:@"fail to load"];
+        } else {
+            // Ad successfully loaded.
+            [weakSelf sendToLog:@"successfull loaded"];
+        }
   }];
   return rewardedAd;
 }
@@ -36,7 +37,7 @@
     if (self.rewardedAd) {
         return;
     }
-    [self createAndLoadRewardedAd];
+    self.rewardedAd = [self createAndLoadRewardedAd];
     [self sendToLog:@"start loading ad"];
 }
 
