@@ -47,18 +47,23 @@
   return version;
 }
 
++ (void)setUpWithConfiguration:(GADMediationServerConfiguration *)configuration
+             completionHandler:(GADMediationAdapterSetUpCompletionBlock)completionHandler {
+    completionHandler(nil);
+}
+
 - (void)loadRewardedAdForAdConfiguration:(GADMediationRewardedAdConfiguration *)adConfiguration
                        completionHandler:(GADMediationRewardedLoadCompletionHandler)completionHandler {
     // Look for the "parameter" key to fetch the parameter you defined in the AdMob UI.
     NSString *adUnitParameters = adConfiguration.credentials.settings[@"parameter"];
     NSDictionary *paramterDict = [self getCustomParametersFromServerParameter:adUnitParameters];
-    
+
     NSCAssert(paramterDict, @"paramter is invalid，please check adapter config");
     NSString *AppID = paramterDict[@"AppID"];
     NSString *AdUnitID = paramterDict[@"AdUnitID"];
-  
+
     self.adLoadCompletionHandler = completionHandler;
-  
+
     self.rewardedVideo = [[AtmosplayRewardedVideo alloc] initWithAppID:AppID AdUnitID:AdUnitID];
     self.rewardedVideo.autoLoad = NO;
     self.rewardedVideo.delegate = self;
