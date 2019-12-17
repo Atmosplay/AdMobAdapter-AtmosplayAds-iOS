@@ -37,6 +37,7 @@
         return;
     }
     [self createAndLoadRewardedAd];
+    [self sendToLog:@"start loading ad"];
 }
 
 - (IBAction)presentAd:(id)sender {
@@ -73,7 +74,7 @@
 /// Tells the delegate that the rewarded ad was dismissed.
 - (void)rewardedAdDidDismiss:(GADRewardedAd *)rewardedAd {
     self.rewardedAd = nil;
-    [self createAndLoadRewardedAd];
+    self.rewardedAd = [self createAndLoadRewardedAd];
     [self sendToLog:@"rewardedAdDidDismiss:"];
 }
 

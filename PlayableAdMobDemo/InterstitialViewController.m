@@ -89,7 +89,7 @@
 /// Called just after dismissing an interstitial and it has animated off the screen.
 - (void)interstitialDidDismissScreen:(GADInterstitial *)ad {
     self.interstitial = nil;
-    [self createAndLoadInterstitial];
+    self.interstitial = [self createAndLoadInterstitial];
     [self sendToLog:@"interstitialDidDismissScreen"];
 }
 
