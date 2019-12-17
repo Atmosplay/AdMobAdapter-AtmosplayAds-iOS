@@ -11,6 +11,7 @@
 		5B40FDCA2369745E002116BA /* RewardedVideoViewControllerLegacy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B40FDC22369745E002116BA /* RewardedVideoViewControllerLegacy.m */; };
 		5B40FDCB2369745E002116BA /* InterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B40FDC42369745E002116BA /* InterstitialViewController.m */; };
 		5B40FDCC2369745E002116BA /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B40FDC62369745E002116BA /* BannerViewController.m */; };
+		5B9EDC5223A8A9B900EED72E /* RewardedVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9EDC5123A8A9B900EED72E /* RewardedVideoController.m */; };
 		C72AD3CB1FD8E6CA0000ADDA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C72AD3CA1FD8E6CA0000ADDA /* AppDelegate.m */; };
 		C72AD3D11FD8E6CA0000ADDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72AD3CF1FD8E6CA0000ADDA /* Main.storyboard */; };
 		C72AD3D31FD8E6CA0000ADDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C72AD3D21FD8E6CA0000ADDA /* Assets.xcassets */; };
@@ -28,6 +29,8 @@
 		5B40FDC62369745E002116BA /* BannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerViewController.m; sourceTree = "<group>"; };
 		5B40FDC82369745E002116BA /* InterstitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterstitialViewController.h; sourceTree = "<group>"; };
 		5B7D90506701616292AF5305 /* libPods-PlayableAdMobDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PlayableAdMobDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B9EDC5023A8A9B900EED72E /* RewardedVideoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RewardedVideoController.h; sourceTree = "<group>"; };
+		5B9EDC5123A8A9B900EED72E /* RewardedVideoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RewardedVideoController.m; sourceTree = "<group>"; };
 		C72AD3C61FD8E6CA0000ADDA /* PlayableAdMobDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayableAdMobDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C72AD3C91FD8E6CA0000ADDA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C72AD3CA1FD8E6CA0000ADDA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 				5B40FDC42369745E002116BA /* InterstitialViewController.m */,
 				5B40FDC32369745E002116BA /* RewardedVideoViewControllerLegacy.h */,
 				5B40FDC22369745E002116BA /* RewardedVideoViewControllerLegacy.m */,
+				5B9EDC5023A8A9B900EED72E /* RewardedVideoController.h */,
+				5B9EDC5123A8A9B900EED72E /* RewardedVideoController.m */,
 				C72AD3C91FD8E6CA0000ADDA /* AppDelegate.h */,
 				C72AD3CA1FD8E6CA0000ADDA /* AppDelegate.m */,
 				C77A98B720887E8400840186 /* MainViewController.h */,
@@ -223,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B40FDCA2369745E002116BA /* RewardedVideoViewControllerLegacy.m in Sources */,
+				5B9EDC5223A8A9B900EED72E /* RewardedVideoController.m in Sources */,
 				C77A98B920887E8400840186 /* MainViewController.m in Sources */,
 				5B40FDCC2369745E002116BA /* BannerViewController.m in Sources */,
 				5B40FDCB2369745E002116BA /* InterstitialViewController.m in Sources */,
