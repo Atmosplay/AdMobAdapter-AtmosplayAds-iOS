@@ -23,7 +23,7 @@
 
 - (GADInterstitial *)createAndLoadInterstitial {
     GADInterstitial *interstitial =
-    [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-5451364651863658/8526077386"];
+    [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-9454875840803246/3300569078"];
     interstitial.delegate = self;
     [interstitial loadRequest:[GADRequest request]];
     _logLabel.text = @"";
@@ -32,6 +32,9 @@
 }
 
 - (IBAction)loadAd:(id)sender {
+    if (self.interstitial) {
+        return;
+    }
     _interstitial = [self createAndLoadInterstitial];
 }
 
@@ -39,7 +42,7 @@
     if ([_interstitial isReady]){
         [_interstitial presentFromRootViewController:self];
     }else{
-        NSLog(@"zp=> AdMob interstitial not ready.");
+        NSLog(@"Atmosplay=> AdMob interstitial not ready.");
         [self sendToLog:@"AdMob interstitial not ready."];
     }
 }
@@ -85,6 +88,8 @@
 
 /// Called just after dismissing an interstitial and it has animated off the screen.
 - (void)interstitialDidDismissScreen:(GADInterstitial *)ad {
+    self.interstitial = nil;
+    [self createAndLoadInterstitial];
     [self sendToLog:@"interstitialDidDismissScreen"];
 }
 
