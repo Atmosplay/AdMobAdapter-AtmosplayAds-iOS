@@ -6,11 +6,11 @@
 //  Copyright © 2019 playable. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RewardedVideoController : NSObject
+@interface RewardedVideoController : UIViewController
 
 @end
 
