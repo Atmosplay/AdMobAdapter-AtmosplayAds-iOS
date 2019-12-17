@@ -16,19 +16,27 @@
 @end
 
 @implementation RewardedVideoController
+- (GADRewardedAd *)createAndLoadRewardedAd {
+  GADRewardedAd *rewardedAd = [[GADRewardedAd alloc]
+      initWithAdUnitID:@"ca-app-pub-9454875840803246/5588639307"];
+  GADRequest *request = [GADRequest request];
+  [rewardedAd loadRequest:request completionHandler:^(GADRequestError * _Nullable error) {
+    if (error) {
+      // Handle ad failed to load case.
+        [self sendToLog:@"fail to load"];
+    } else {
+      // Ad successfully loaded.
+        [self sendToLog:@"successfull loaded"];
+    }
+  }];
+  return rewardedAd;
+}
+
 - (IBAction)loadAd:(id)sender {
-    self.rewardedAd = [[GADRewardedAd alloc]
-                       initWithAdUnitID:@"ca-app-pub-3940256099942544/1712485313"];
-    GADRequest *request = [GADRequest request];
-    [self.rewardedAd loadRequest:request completionHandler:^(GADRequestError * _Nullable error) {
-      if (error) {
-        // Handle ad failed to load case.
-          [self sendToLog:@"fail to load"];
-      } else {
-        // Ad successfully loaded.
-          [self sendToLog:@"successfull loaded"];
-      }
-    }];
+    if (self.rewardedAd) {
+        return;
+    }
+    [self createAndLoadRewardedAd];
 }
 
 - (IBAction)presentAd:(id)sender {
@@ -64,6 +72,8 @@
 
 /// Tells the delegate that the rewarded ad was dismissed.
 - (void)rewardedAdDidDismiss:(GADRewardedAd *)rewardedAd {
+    self.rewardedAd = nil;
+    [self createAndLoadRewardedAd];
     [self sendToLog:@"rewardedAdDidDismiss:"];
 }
 
