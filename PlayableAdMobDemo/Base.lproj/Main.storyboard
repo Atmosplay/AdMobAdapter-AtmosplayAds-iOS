@@ -20,23 +20,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAb-Lb-9QL">
-                                <rect key="frame" x="27.5" y="164" width="320" height="30"/>
+                                <rect key="frame" x="103.5" y="164" width="168" height="30"/>
                                 <state key="normal" title="RewardedVideo(Legacy)"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="NcD-B6-S5T"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQT-yE-kUg">
-                                <rect key="frame" x="27.5" y="114" width="320" height="30"/>
+                                <rect key="frame" x="103.5" y="114" width="168" height="30"/>
                                 <state key="normal" title="Interstitial"/>
                                 <connections>
                                     <segue destination="jO8-J4-jtR" kind="show" id="1O3-df-Jbt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ru-z3-gIp">
-                                <rect key="frame" x="27.5" y="64" width="320" height="30"/>
+                                <rect key="frame" x="103.5" y="64" width="168" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="LBs-yL-g1H"/>
                                     <constraint firstAttribute="height" constant="30" id="xv3-0b-Lsa"/>
                                 </constraints>
                                 <state key="normal" title="Banner"/>
@@ -44,19 +43,27 @@
                                     <segue destination="guA-L0-hgJ" kind="show" id="yql-1H-5es"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOP-dQ-jlG">
+                                <rect key="frame" x="103.5" y="214" width="168" height="30"/>
+                                <state key="normal" title="RewardedVideo"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="bQT-yE-kUg" firstAttribute="top" secondItem="0ru-z3-gIp" secondAttribute="bottom" constant="20" id="1FM-Jw-nHh"/>
+                            <constraint firstItem="DOP-dQ-jlG" firstAttribute="centerX" secondItem="LAb-Lb-9QL" secondAttribute="centerX" id="3LG-ZU-6EQ"/>
                             <constraint firstItem="LAb-Lb-9QL" firstAttribute="width" secondItem="bQT-yE-kUg" secondAttribute="width" id="F4Z-jy-EGA"/>
                             <constraint firstItem="bQT-yE-kUg" firstAttribute="height" secondItem="0ru-z3-gIp" secondAttribute="height" id="KGE-o3-pSv"/>
                             <constraint firstItem="LAb-Lb-9QL" firstAttribute="top" secondItem="bQT-yE-kUg" secondAttribute="bottom" constant="20" id="YYc-g5-Vde"/>
+                            <constraint firstItem="DOP-dQ-jlG" firstAttribute="top" secondItem="LAb-Lb-9QL" secondAttribute="bottom" constant="20" id="dlj-pS-Dmh"/>
                             <constraint firstItem="0ru-z3-gIp" firstAttribute="centerX" secondItem="QwF-ja-xjj" secondAttribute="centerX" id="gfw-wE-4vy"/>
                             <constraint firstItem="bQT-yE-kUg" firstAttribute="centerX" secondItem="0ru-z3-gIp" secondAttribute="centerX" id="hWD-XH-Ze0"/>
                             <constraint firstItem="LAb-Lb-9QL" firstAttribute="centerX" secondItem="bQT-yE-kUg" secondAttribute="centerX" id="jSb-5C-Kr7"/>
                             <constraint firstItem="bQT-yE-kUg" firstAttribute="width" secondItem="0ru-z3-gIp" secondAttribute="width" id="nbh-Yc-Brs"/>
+                            <constraint firstItem="DOP-dQ-jlG" firstAttribute="width" secondItem="LAb-Lb-9QL" secondAttribute="width" id="qcj-Fe-OB2"/>
                             <constraint firstItem="LAb-Lb-9QL" firstAttribute="height" secondItem="bQT-yE-kUg" secondAttribute="height" id="tdY-mz-zVr"/>
                             <constraint firstItem="0ru-z3-gIp" firstAttribute="top" secondItem="2qI-6T-yeX" secondAttribute="bottom" constant="20" id="wDN-AS-GPU"/>
+                            <constraint firstItem="DOP-dQ-jlG" firstAttribute="height" secondItem="LAb-Lb-9QL" secondAttribute="height" id="xkq-Po-FWe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="AtmosplayAds" id="LFU-Lf-xFN"/>
@@ -177,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ps-RT-miW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1022" y="453"/>
+            <point key="canvasLocation" x="1159" y="913"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MOI-CS-geu">
@@ -245,7 +252,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U0Y-u7-Bf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="374" y="-621"/>
+            <point key="canvasLocation" x="26" y="-680"/>
         </scene>
     </scenes>
 </document>
