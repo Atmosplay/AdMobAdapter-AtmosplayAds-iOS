@@ -7,14 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <GoogleMobileAds/Mediation/GADMRewardBasedVideoAdNetworkConnectorProtocol.h>
-#import <GoogleMobileAds/Mediation/GADMRewardBasedVideoAdNetworkAdapterProtocol.h>
-#import <AtmosplayAds/AtmosplayRewardedVideo.h>
 
 @import GoogleMobileAds;
-@interface AtmosplayAdsRewardedVideoAdapterLegacy : NSObject<GADMRewardBasedVideoAdNetworkAdapter, AtmosplayRewardedVideoDelegate> {
-}
-@property(nonatomic, strong) AtmosplayRewardedVideo *pAd;
-@property(nonatomic, strong) id<GADMRewardBasedVideoAdNetworkConnector> rewardedConnector;
+@interface AtmosplayAdsRewardedVideoAdapterLegacy : NSObject<GADMRewardBasedVideoAdNetworkAdapter>
 
 @end

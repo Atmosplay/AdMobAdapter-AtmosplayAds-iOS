@@ -7,8 +7,18 @@
 //
 
 #import "AtmosplayAdsRewardedVideoAdapterLegacy.h"
+#import <AtmosplayAds/AtmosplayRewardedVideo.h>
+
+@interface AtmosplayAdsRewardedVideoAdapterLegacy () <AtmosplayRewardedVideoDelegate>
+@property(nonatomic, strong) AtmosplayRewardedVideo *rewardedVideo;
+@property(nonatomic, strong) id<GADMRewardBasedVideoAdNetworkConnector> rewardedConnector;
+
+@end
 
 @implementation AtmosplayAdsRewardedVideoAdapterLegacy
++ (NSString *)adapterVersion {
+    return @"3.0.0";
+}
 
 - (instancetype)initWithRewardBasedVideoAdNetworkConnector: (id<GADMRewardBasedVideoAdNetworkConnector>)connector {
     if (!connector) {
@@ -21,34 +31,29 @@
     return self;
 }
 
-+ (NSString *)adapterVersion {
-    return @"2.6.0";
-}
-
-
 - (void)presentRewardBasedVideoAdWithRootViewController:(UIViewController *)viewController {
-    if (_pAd.isReady) {
-        [_pAd showRewardedVideoWithViewController:viewController];
+    if (_rewardedVideo.isReady) {
+        [_rewardedVideo showRewardedVideoWithViewController:viewController];
     } else {
         NSLog(@"No ads to show.");
     }
 }
 
 - (void)setUp {
-    NSDictionary *paramterDict = [self dictionaryWithJsonString:[_rewardedConnector credentials][@"parameter"]];
-    NSCAssert(paramterDict, @"Yumi paramter is invalid，please check yumi adapter config");
+    NSDictionary *paramterDict = [self getCustomParametersFromServerParameter:[_rewardedConnector credentials][@"parameter"]];
+    NSCAssert(paramterDict, @"paramter is invalid，please check adapter config");
     NSString *AppID = paramterDict[@"AppID"];
     NSString *AdUnitID = paramterDict[@"AdUnitID"];
     
-    _pAd = [[AtmosplayRewardedVideo alloc] initWithAppID:AppID AdUnitID:AdUnitID];
-    _pAd.autoLoad = NO;
-    _pAd.delegate = self;
+    _rewardedVideo = [[AtmosplayRewardedVideo alloc] initWithAppID:AppID AdUnitID:AdUnitID];
+    _rewardedVideo.autoLoad = NO;
+    _rewardedVideo.delegate = self;
     [_rewardedConnector adapterDidSetUpRewardBasedVideoAd:self];
-    NSLog(@"zp=> setUp");
+    NSLog(@"AtmosplayAds=> setUp");
 }
 
 #pragma mark: private
-- (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString {
+- (NSDictionary *)getCustomParametersFromServerParameter:(NSString *)jsonString {
     if (jsonString == nil) {
         return nil;
     }
@@ -72,8 +77,8 @@
 }
 
 - (void)requestRewardBasedVideoAd {
-    [_pAd loadAd];
-    NSLog(@"zp=> requestRewardBasedVideoAd");
+    [_rewardedVideo loadAd];
+    NSLog(@"AtmosplayAds=> requestRewardBasedVideoAd");
 }
 
 #pragma mark - AtmosplayRewardedVideoDelegate
