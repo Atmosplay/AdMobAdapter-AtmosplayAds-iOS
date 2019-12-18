@@ -50,13 +50,13 @@ EXTERNAL SOURCES:
     :path: "./GoogleMobileAdsMediationAtmosplayAds.podspec"
 
 SPEC CHECKSUMS:
-  AtmosplayAds: a63626b3ad6e3cbba4ad8fb1caf635ab4cb3029d
+  AtmosplayAds: ff0dec49168a42b92934f3c042bde312075dfe15
   Google-Mobile-Ads-SDK: 4b855e61f9c5a1a97cb55734ea372a4c36d00242
   GoogleAppMeasurement: dfe55efa543e899d906309eaaac6ca26d249862f
   GoogleMobileAdsMediationAtmosplayAds: 392fe4056e4214950c70697be302881deccdf787
   GoogleUtilities: 547a86735c6f0ee30ad17e94df4fc21f616b71cb
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
 
-PODFILE CHECKSUM: 0bfb4cd8c7df5e4b63314782ba2690b4181709a5
+PODFILE CHECKSUM: 5a55c206c6098e784fc42e3379eae3cfb02d8919
 
 COCOAPODS: 1.8.4
