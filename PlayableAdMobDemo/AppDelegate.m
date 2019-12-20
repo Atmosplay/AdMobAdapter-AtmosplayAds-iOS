@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 @import GoogleMobileAds;
+@import AppCenter;
+@import AppCenterAnalytics;
+@import AppCenterCrashes;
 
 @interface AppDelegate ()
 
@@ -19,6 +22,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [[GADMobileAds sharedInstance] startWithCompletionHandler:nil];
+    [MSAppCenter start:@"f69d5365-4ea4-4f08-bb73-1cbfa86d1a93" withServices:@[
+      [MSAnalytics class],
+      [MSCrashes class]
+    ]];
     return YES;
 }
 

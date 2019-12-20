@@ -1,4 +1,12 @@
 PODS:
+  - AppCenter (2.5.3):
+    - AppCenter/Analytics (= 2.5.3)
+    - AppCenter/Crashes (= 2.5.3)
+  - AppCenter/Analytics (2.5.3):
+    - AppCenter/Core
+  - AppCenter/Core (2.5.3)
+  - AppCenter/Crashes (2.5.3):
+    - AppCenter/Core
   - AtmosplayAds (3.0.0)
   - Google-Mobile-Ads-SDK (7.53.0):
     - GoogleAppMeasurement (~> 6.0)
@@ -156,11 +164,13 @@ PODS:
   - nanopb/encode (0.3.9011)
 
 DEPENDENCIES:
+  - AppCenter
   - GoogleMobileAdsMediationAtmosplayAds (from `./GoogleMobileAdsMediationAtmosplayAds.podspec`)
   - GoogleMobileAdsMediationTestSuite
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - AppCenter
     - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
     - GoogleMobileAdsMediationTestSuite
@@ -177,6 +187,7 @@ EXTERNAL SOURCES:
     :path: "./GoogleMobileAdsMediationAtmosplayAds.podspec"
 
 SPEC CHECKSUMS:
+  AppCenter: 765ff38c4d360fc5ec61b61a8be24d74cd6d4d83
   AtmosplayAds: dda42f66901eb16a763272b8230a8685782352e7
   Google-Mobile-Ads-SDK: 4b855e61f9c5a1a97cb55734ea372a4c36d00242
   GoogleAppMeasurement: dfe55efa543e899d906309eaaac6ca26d249862f
@@ -188,6 +199,6 @@ SPEC CHECKSUMS:
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
 
-PODFILE CHECKSUM: 543823ae50aee1a8c3bced5f8d6f567e40381bcb
+PODFILE CHECKSUM: c85b45a889380b03927f6e9c76832404b4aaa441
 
 COCOAPODS: 1.8.4
