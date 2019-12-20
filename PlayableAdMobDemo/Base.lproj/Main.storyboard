@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FZV-cT-KuS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FZV-cT-KuS">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15703"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -50,6 +50,13 @@
                                     <segue destination="WwT-6k-yE6" kind="show" id="62o-PG-wrX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ox-hH-Lpj">
+                                <rect key="frame" x="103.5" y="264" width="168" height="30"/>
+                                <state key="normal" title="Test suit"/>
+                                <connections>
+                                    <action selector="presentTestSuit:" destination="981-Hf-uwO" eventType="touchUpInside" id="HMG-IG-h0j"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -57,14 +64,18 @@
                             <constraint firstItem="DOP-dQ-jlG" firstAttribute="centerX" secondItem="LAb-Lb-9QL" secondAttribute="centerX" id="3LG-ZU-6EQ"/>
                             <constraint firstItem="LAb-Lb-9QL" firstAttribute="width" secondItem="bQT-yE-kUg" secondAttribute="width" id="F4Z-jy-EGA"/>
                             <constraint firstItem="bQT-yE-kUg" firstAttribute="height" secondItem="0ru-z3-gIp" secondAttribute="height" id="KGE-o3-pSv"/>
+                            <constraint firstItem="5ox-hH-Lpj" firstAttribute="height" secondItem="DOP-dQ-jlG" secondAttribute="height" id="X3a-ou-6aj"/>
                             <constraint firstItem="LAb-Lb-9QL" firstAttribute="top" secondItem="bQT-yE-kUg" secondAttribute="bottom" constant="20" id="YYc-g5-Vde"/>
                             <constraint firstItem="DOP-dQ-jlG" firstAttribute="top" secondItem="LAb-Lb-9QL" secondAttribute="bottom" constant="20" id="dlj-pS-Dmh"/>
+                            <constraint firstItem="5ox-hH-Lpj" firstAttribute="top" secondItem="DOP-dQ-jlG" secondAttribute="bottom" constant="20" id="f26-Xb-EyU"/>
                             <constraint firstItem="0ru-z3-gIp" firstAttribute="centerX" secondItem="QwF-ja-xjj" secondAttribute="centerX" id="gfw-wE-4vy"/>
                             <constraint firstItem="bQT-yE-kUg" firstAttribute="centerX" secondItem="0ru-z3-gIp" secondAttribute="centerX" id="hWD-XH-Ze0"/>
                             <constraint firstItem="LAb-Lb-9QL" firstAttribute="centerX" secondItem="bQT-yE-kUg" secondAttribute="centerX" id="jSb-5C-Kr7"/>
                             <constraint firstItem="bQT-yE-kUg" firstAttribute="width" secondItem="0ru-z3-gIp" secondAttribute="width" id="nbh-Yc-Brs"/>
                             <constraint firstItem="DOP-dQ-jlG" firstAttribute="width" secondItem="LAb-Lb-9QL" secondAttribute="width" id="qcj-Fe-OB2"/>
+                            <constraint firstItem="5ox-hH-Lpj" firstAttribute="width" secondItem="DOP-dQ-jlG" secondAttribute="width" id="rmF-tT-NDV"/>
                             <constraint firstItem="LAb-Lb-9QL" firstAttribute="height" secondItem="bQT-yE-kUg" secondAttribute="height" id="tdY-mz-zVr"/>
+                            <constraint firstItem="5ox-hH-Lpj" firstAttribute="centerX" secondItem="DOP-dQ-jlG" secondAttribute="centerX" id="vsn-02-79M"/>
                             <constraint firstItem="0ru-z3-gIp" firstAttribute="top" secondItem="2qI-6T-yeX" secondAttribute="bottom" constant="20" id="wDN-AS-GPU"/>
                             <constraint firstItem="DOP-dQ-jlG" firstAttribute="height" secondItem="LAb-Lb-9QL" secondAttribute="height" id="xkq-Po-FWe"/>
                         </constraints>
