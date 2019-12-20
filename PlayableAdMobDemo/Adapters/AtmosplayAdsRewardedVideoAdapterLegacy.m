@@ -45,7 +45,7 @@
     NSString *AppID = paramterDict[@"AppID"];
     NSString *AdUnitID = paramterDict[@"AdUnitID"];
     
-    _rewardedVideo = [[AtmosplayRewardedVideo alloc] initWithAppID:AppID AdUnitID:AdUnitID];
+    _rewardedVideo = [[AtmosplayRewardedVideo alloc] initWithAppID:AppID adUnitID:AdUnitID];
     _rewardedVideo.autoLoad = NO;
     _rewardedVideo.delegate = self;
     [_rewardedConnector adapterDidSetUpRewardBasedVideoAd:self];

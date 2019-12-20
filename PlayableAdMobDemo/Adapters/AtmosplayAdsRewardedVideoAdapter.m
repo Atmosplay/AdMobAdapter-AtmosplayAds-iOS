@@ -64,7 +64,7 @@
 
     self.adLoadCompletionHandler = completionHandler;
 
-    self.rewardedVideo = [[AtmosplayRewardedVideo alloc] initWithAppID:AppID AdUnitID:AdUnitID];
+    self.rewardedVideo = [[AtmosplayRewardedVideo alloc] initWithAppID:AppID adUnitID:AdUnitID];
     self.rewardedVideo.autoLoad = NO;
     self.rewardedVideo.delegate = self;
     [self.rewardedVideo loadAd];

@@ -25,7 +25,7 @@
     NSString *AdUnitID = paramterDict[@"AdUnitID"];
     
     self.interstitial = [[AtmosplayInterstitial alloc] initWithAppID:AppID
-                                                            AdUnitID:AdUnitID];
+                                                            adUnitID:AdUnitID];
     self.interstitial.delegate = self;
     self.interstitial.autoLoad = NO;
     [self.interstitial loadAd];
