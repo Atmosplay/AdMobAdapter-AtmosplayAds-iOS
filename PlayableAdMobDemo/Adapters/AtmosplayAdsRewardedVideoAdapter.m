@@ -73,7 +73,7 @@
 - (void)presentFromViewController:(nonnull UIViewController *)viewController {
   if ([self.rewardedVideo isReady]) {
     // The reward based video ad is available, present the ad.
-    [self.rewardedVideo showRewardedVideoWithViewController:viewController];
+    [self.rewardedVideo showRewardedVideoWithViewController:nil];
   } else {
     NSError *error =
       [NSError errorWithDomain:@"AtmosplayAdsRewardedVideoAdapter"
@@ -139,6 +139,7 @@
 /// Tells the delegate that the ad did animate off the screen.
 - (void)atmosplayRewardedVideoDidDismissScreen:(AtmosplayRewardedVideo *)ads {
     [self.delegate willDismissFullScreenView];
+    [self.delegate didDismissFullScreenView];
 }
 
 /// Tells the delegate that the ad is clicked

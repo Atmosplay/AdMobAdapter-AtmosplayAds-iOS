@@ -33,7 +33,7 @@
 
 - (void)presentRewardBasedVideoAdWithRootViewController:(UIViewController *)viewController {
     if (_rewardedVideo.isReady) {
-        [_rewardedVideo showRewardedVideoWithViewController:viewController];
+        [_rewardedVideo showRewardedVideoWithViewController:nil];
     } else {
         NSLog(@"No ads to show.");
     }

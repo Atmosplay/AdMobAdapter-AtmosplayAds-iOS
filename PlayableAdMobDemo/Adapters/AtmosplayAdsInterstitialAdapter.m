@@ -33,7 +33,7 @@
 
 - (void)presentFromRootViewController:(UIViewController *)rootViewController {
     if (self.interstitial.isReady) {
-        [self.interstitial showInterstitialWithViewController:rootViewController];
+        [self.interstitial showInterstitialWithViewController:nil];
     } else {
         NSLog(@"Atmosplay interstitial not ready");
     }
