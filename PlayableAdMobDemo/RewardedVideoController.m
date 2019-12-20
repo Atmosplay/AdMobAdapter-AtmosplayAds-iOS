@@ -25,6 +25,8 @@
         if (error) {
             // Handle ad failed to load case.
             [weakSelf sendToLog:@"fail to load"];
+            self.rewardedAd = nil;
+            self.rewardedAd = [self createAndLoadRewardedAd];
         } else {
             // Ad successfully loaded.
             [weakSelf sendToLog:@"successfull loaded"];
