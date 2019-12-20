@@ -48,7 +48,7 @@ platform :ios do
     # Build
     gym(
       scheme: "PlayableAdMobDemo",
-      workspace: "Example/PlayableAdMobDemo.xcworkspace",
+      workspace: "PlayableAdMobDemo.xcworkspace",
       configuration: "Release",
       clean: true,
       include_bitcode: false,
