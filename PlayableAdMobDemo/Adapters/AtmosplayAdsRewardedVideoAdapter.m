@@ -11,7 +11,7 @@
 @interface AtmosplayAdsRewardedVideoAdapter () <GADMediationRewardedAd,AtmosplayRewardedVideoDelegate>
 @property (nonatomic) AtmosplayRewardedVideo *rewardedVideo;
 @property(nonatomic, weak, nullable) id<GADMediationRewardedAdEventDelegate> delegate;
-@property (nonatomic,copy) GADMediationRewardedLoadCompletionHandler adLoadCompletionHandler;
+@property (nonatomic, copy) GADMediationRewardedLoadCompletionHandler adLoadCompletionHandler;
 
 @end
 
