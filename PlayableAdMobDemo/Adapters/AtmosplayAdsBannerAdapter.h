@@ -1,5 +1,5 @@
 //
-//  ZplayAdsAdMobBannerAdapter.h
+//  AtmosplayAdsBannerAdapter.h
 //  PlayableAdMobDemo
 //
 //  Created by 王泽永 on 2019/10/30.
@@ -10,9 +10,6 @@
 #import <GoogleMobileAds/GADMobileAds.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
-@interface ZplayAdsAdMobBannerAdapter : NSObject <GADCustomEventBanner>
-
+@interface AtmosplayAdsBannerAdapter : NSObject <GADCustomEventBanner>
 @end
-
 NS_ASSUME_NONNULL_END

@@ -1,45 +1,49 @@
 //
-//  ZplayAdsAdMobBannerAdapter.m
+//  AtmosplayAdsBannerAdapter.m
 //  PlayableAdMobDemo
 //
 //  Created by 王泽永 on 2019/10/30.
 //  Copyright © 2019 playable. All rights reserved.
 //
 
-#import "ZplayAdsAdMobBannerAdapter.h"
-#import <PlayableAds/AtmosplayAdsBanner.h>
+#import "AtmosplayAdsBannerAdapter.h"
+#import <AtmosplayAds/AtmosplayBanner.h>
 
-@interface ZplayAdsAdMobBannerAdapter () <AtmosplayAdsBannerDelegate>
-@property (nonatomic) AtmosplayAdsBanner *bannerView;
+@interface AtmosplayAdsBannerAdapter () <AtmosplayBannerDelegate>
+@property (nonatomic) AtmosplayBanner *bannerView;
 
 @end
 
-@implementation ZplayAdsAdMobBannerAdapter
+@implementation AtmosplayAdsBannerAdapter
 @synthesize delegate;
-- (void)requestBannerAd:(GADAdSize)adSize parameter:(nullable NSString *)serverParameter label:(nullable NSString *)serverLabel request:(nonnull GADCustomEventRequest *)request {
+- (void)requestBannerAd:(GADAdSize)adSize
+              parameter:(nullable NSString *)serverParameter
+                  label:(nullable NSString *)serverLabel
+                request:(nonnull GADCustomEventRequest *)request {
     
-    NSDictionary *paramterDict = [self dictionaryWithJsonString:serverParameter];
-    NSCAssert(paramterDict, @"Yumi paramter is invalid，please check yumi adapter config");
+    NSDictionary *paramterDict = [self getCustomParametersFromServerParameter:serverParameter];
+    NSCAssert(paramterDict, @"paramter is invalid，please check adapter config");
     NSString *AppID = paramterDict[@"AppID"];
     NSString *AdUnitID = paramterDict[@"AdUnitID"];
 
-    self.bannerView = [[AtmosplayAdsBanner alloc] initWithAdUnitID:AdUnitID appID:AppID rootViewController:[self.delegate viewControllerForPresentingModalView]];
+    self.bannerView = [[AtmosplayBanner alloc] initWithAppID:AppID
+                                                    adUnitID:AdUnitID
+                                          rootViewController:[self.delegate viewControllerForPresentingModalView]];
     self.bannerView.delegate = self;
-    
-    self.bannerView.bannerSize = kAtmosplayAdsBanner320x50;
+    self.bannerView.bannerSize = kAtmosplayBanner320x50;
     if (GADAdSizeEqualToSize(adSize, kGADAdSizeLeaderboard)) {
-        self.bannerView.bannerSize = kAtmosplayAdsBanner728x90;
+        self.bannerView.bannerSize = kAtmosplayBanner728x90;
     } else if (GADAdSizeEqualToSize(adSize, kGADAdSizeSmartBannerPortrait)) {
-        self.bannerView.bannerSize = kAtmosplayAdsSmartBannerPortrait;
+        self.bannerView.bannerSize = kAtmosplaySmartBannerPortrait;
     } else if (GADAdSizeEqualToSize(adSize, kGADAdSizeSmartBannerLandscape)) {
-        self.bannerView.bannerSize = kAtmosplayAdsSmartBannerLandscape;
+        self.bannerView.bannerSize = kAtmosplaySmartBannerLandscape;
     }
     
     [self.bannerView loadAd];
 }
 
 #pragma mark: private
-- (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString {
+- (NSDictionary *)getCustomParametersFromServerParameter:(NSString *)jsonString {
     if (jsonString == nil) {
         return nil;
     }
@@ -57,19 +61,19 @@
 
 #pragma mark - AtmosplayAdsBannerDelegate
 /// Tells the delegate that an ad has been successfully loaded.
-- (void)atmosplayAdsBannerViewDidLoad:(AtmosplayAdsBanner *)bannerView {
+- (void)AtmosplayBannerViewDidLoad:(AtmosplayBanner *)bannerView {
     [self.delegate customEventBanner:self didReceiveAd:bannerView];
 }
 
 /// Tells the delegate that a request failed.
-- (void)atmosplayAdsBannerView:(AtmosplayAdsBanner *)bannerView didFailWithError:(NSError *)error {
+- (void)AtmosplayBannerView:(AtmosplayBanner *)bannerView didFailWithError:(NSError *)error {
     self.bannerView.delegate = nil;
     self.bannerView = nil;
     [self.delegate customEventBanner:self didFailAd:error];
 }
 
 /// Tells the delegate that the banner view has been clicked.
-- (void)atmosplayAdsBannerViewDidClick:(AtmosplayAdsBanner *)bannerView {
+- (void)AtmosplayBannerViewDidClick:(AtmosplayBanner *)bannerView {
     [self.delegate customEventBannerWasClicked:self];
     [self.delegate customEventBannerWillLeaveApplication:self];
 }

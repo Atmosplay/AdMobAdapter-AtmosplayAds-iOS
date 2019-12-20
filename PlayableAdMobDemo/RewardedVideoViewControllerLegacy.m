@@ -1,21 +1,21 @@
 //
-//  ViewController.m
+//  RewardedVideoViewControllerLegacy.m
 //  PlayableAdMobDemo
 //
 //  Created by lgd on 2017/12/7.
 //  Copyright © 2017年 playable. All rights reserved.
 //
 
-#import "RewardedVideoViewController.h"
+#import "RewardedVideoViewControllerLegacy.h"
 @import GoogleMobileAds;
 
-@interface RewardedVideoViewController () <GADRewardBasedVideoAdDelegate>
+@interface RewardedVideoViewControllerLegacy () <GADRewardBasedVideoAdDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *logLabel;
 
 @end
 
-@implementation RewardedVideoViewController
+@implementation RewardedVideoViewControllerLegacy
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,7 +34,7 @@
     [self sendToLog:@"start loading ad"];
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     [[GADRewardBasedVideoAd sharedInstance] loadRequest:[GADRequest request]
-                                           withAdUnitID:@"ca-app-pub-5451364651863658/5455468949"];
+                                           withAdUnitID:@"ca-app-pub-9454875840803246/8002548642"];
 }
 
 - (IBAction)presentAd:(UIButton *)sender {
