@@ -45,20 +45,22 @@ $ pod install --repo-update
 
 ## 配置Class Name和Parameter
 
-1、Class Name填写Atmosplay Adapter ClassName.
-	- Banner
+1、Class Name填写Atmosplay Adapter ClassName.  
+
+	- Banner  
 	```
 	AtmosplayAdsBannerAdapter
 	```
-	- Interstitial
+
+	- Interstitial  
 	```
 	AtmosplayAdsInterstitialAdapter
 	```
-	- Rewarded Video
+	- Rewarded Video  
 	```
 	AtmosplayAdsRewardedVideoAdapter
 	```
-	- Rewarded Video Legacy
+	- Rewarded Video Legacy  
 	```
 	AtmosplayAdsRewardedVideoAdapterLegacy
 	```
