@@ -5,8 +5,9 @@
 
 # 集成前准备
 ## 入门指南
-在将Atmosplay SDK聚合到Admob之前，请按照以下说明操作：
-1.关于Admob SDK 集成说明，请参考[Admob SDK集成文档](https://developers.google.com/admob/ios/quick-start)
+在将Atmosplay SDK聚合到Admob之前，请按照以下说明操作：  
+
+1.关于Admob SDK 集成说明，请参考[Admob SDK集成文档](https://developers.google.com/admob/ios/quick-start)  
 
 2.请仔细阅读[Atmosplay 开发者集成文档](https://github.com/Atmosplay/Help-Center-for-Publisher/blob/master/guides.md),其中介绍了如何在Atmosplay创建App ID、AdUnitID。
 
