@@ -49,27 +49,27 @@ $ pod install --repo-update
 
 	- Banner  
 
-	```
-	AtmosplayAdsBannerAdapter
-	```
+```
+AtmosplayAdsBannerAdapter
+```
 
 	- Interstitial  
 
-	```
-	AtmosplayAdsInterstitialAdapter
-	```
+```
+AtmosplayAdsInterstitialAdapter
+```
 	
 	- Rewarded Video  
 
-	```
-	AtmosplayAdsRewardedVideoAdapter
-	```
+```
+AtmosplayAdsRewardedVideoAdapter
+```
 	
 	- Rewarded Video Legacy  
-	
-	```
-	AtmosplayAdsRewardedVideoAdapterLegacy
-	```
+
+```
+AtmosplayAdsRewardedVideoAdapterLegacy
+```
 
 2、Parameter使用json格式，参数中不能含有空格，注意大小写，具体格式参考下方说明。
 	```
