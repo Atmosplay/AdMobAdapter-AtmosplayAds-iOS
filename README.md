@@ -68,9 +68,10 @@ AtmosplayAdsRewardedVideoAdapterLegacy
 ```
 
 2、Parameter使用json格式，参数中不能含有空格，注意大小写，具体格式参考下方说明。
-	```
-	{"AppID":"YOUR_APP_ID","AdUnitID":"YOUR_ADUNIT_ID"}
-	```
+
+```
+{"AppID":"YOUR_APP_ID","AdUnitID":"YOUR_ADUNIT_ID"}
+```
 
 <img src='resources/add_custom_event_3.png'>
 
