@@ -24,6 +24,12 @@ pod 'GoogleMobileAdsMediationAtmosplayAds'
 $ pod install --repo-update
 ```
 
+若您使用的是Unity开发环境，将下面代码添加到`GoogleMobileAdsDependencies.xml`文件中
+```
+<iosPod name="GoogleMobileAdsMediationAtmosplayAds" version="3.0.1">
+    </iosPod>
+```
+
 如果您刚开始接触 CocoaPods，请参阅其[官方文档](https://guides.cocoapods.org/using/using-cocoapods)，了解如何创建和使用 Podfile。
 
 # Admob后台配置指南
