@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+@import GoogleMobileAdsMediationTestSuite;
 
 @interface MainViewController ()
 
@@ -22,6 +23,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)presentTestSuit:(id)sender {
+    [GoogleMobileAdsMediationTestSuite presentOnViewController:self
+                                                      delegate:nil];
 }
 
 /*

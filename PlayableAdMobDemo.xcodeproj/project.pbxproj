@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		54ECA882011A1FBCEDDC61E3 /* libPods-PlayableAdMobDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7D90506701616292AF5305 /* libPods-PlayableAdMobDemo.a */; };
-		5B40FDCA2369745E002116BA /* RewardedVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B40FDC22369745E002116BA /* RewardedVideoViewController.m */; };
+		5B40FDCA2369745E002116BA /* RewardedVideoViewControllerLegacy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B40FDC22369745E002116BA /* RewardedVideoViewControllerLegacy.m */; };
 		5B40FDCB2369745E002116BA /* InterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B40FDC42369745E002116BA /* InterstitialViewController.m */; };
 		5B40FDCC2369745E002116BA /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B40FDC62369745E002116BA /* BannerViewController.m */; };
+		5B9EDC5223A8A9B900EED72E /* RewardedVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9EDC5123A8A9B900EED72E /* RewardedVideoController.m */; };
 		C72AD3CB1FD8E6CA0000ADDA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C72AD3CA1FD8E6CA0000ADDA /* AppDelegate.m */; };
 		C72AD3D11FD8E6CA0000ADDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72AD3CF1FD8E6CA0000ADDA /* Main.storyboard */; };
 		C72AD3D31FD8E6CA0000ADDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C72AD3D21FD8E6CA0000ADDA /* Assets.xcassets */; };
@@ -21,13 +22,15 @@
 
 /* Begin PBXFileReference section */
 		55A1A6376D176D558A02BF05 /* Pods-PlayableAdMobDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayableAdMobDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlayableAdMobDemo/Pods-PlayableAdMobDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		5B40FDC22369745E002116BA /* RewardedVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardedVideoViewController.m; sourceTree = "<group>"; };
-		5B40FDC32369745E002116BA /* RewardedVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardedVideoViewController.h; sourceTree = "<group>"; };
+		5B40FDC22369745E002116BA /* RewardedVideoViewControllerLegacy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardedVideoViewControllerLegacy.m; sourceTree = "<group>"; };
+		5B40FDC32369745E002116BA /* RewardedVideoViewControllerLegacy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardedVideoViewControllerLegacy.h; sourceTree = "<group>"; };
 		5B40FDC42369745E002116BA /* InterstitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterstitialViewController.m; sourceTree = "<group>"; };
 		5B40FDC52369745E002116BA /* BannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerViewController.h; sourceTree = "<group>"; };
 		5B40FDC62369745E002116BA /* BannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerViewController.m; sourceTree = "<group>"; };
 		5B40FDC82369745E002116BA /* InterstitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterstitialViewController.h; sourceTree = "<group>"; };
 		5B7D90506701616292AF5305 /* libPods-PlayableAdMobDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PlayableAdMobDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B9EDC5023A8A9B900EED72E /* RewardedVideoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RewardedVideoController.h; sourceTree = "<group>"; };
+		5B9EDC5123A8A9B900EED72E /* RewardedVideoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RewardedVideoController.m; sourceTree = "<group>"; };
 		C72AD3C61FD8E6CA0000ADDA /* PlayableAdMobDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayableAdMobDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C72AD3C91FD8E6CA0000ADDA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C72AD3CA1FD8E6CA0000ADDA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -87,8 +90,10 @@
 				5B40FDC62369745E002116BA /* BannerViewController.m */,
 				5B40FDC82369745E002116BA /* InterstitialViewController.h */,
 				5B40FDC42369745E002116BA /* InterstitialViewController.m */,
-				5B40FDC32369745E002116BA /* RewardedVideoViewController.h */,
-				5B40FDC22369745E002116BA /* RewardedVideoViewController.m */,
+				5B40FDC32369745E002116BA /* RewardedVideoViewControllerLegacy.h */,
+				5B40FDC22369745E002116BA /* RewardedVideoViewControllerLegacy.m */,
+				5B9EDC5023A8A9B900EED72E /* RewardedVideoController.h */,
+				5B9EDC5123A8A9B900EED72E /* RewardedVideoController.m */,
 				C72AD3C91FD8E6CA0000ADDA /* AppDelegate.h */,
 				C72AD3CA1FD8E6CA0000ADDA /* AppDelegate.m */,
 				C77A98B720887E8400840186 /* MainViewController.h */,
@@ -204,11 +209,19 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PlayableAdMobDemo/Pods-PlayableAdMobDemo-resources.sh",
-				"${PODS_ROOT}/PlayableAds/Resources/ZplayMuteListener.bundle",
+				"${PODS_ROOT}/AtmosplayAds/Resources/AtmosplayAds.bundle",
+				"${PODS_ROOT}/GoogleMobileAdsMediationTestSuite/Resources/GoogleMobileAdsMediationTestSuite.bundle",
+				"${PODS_ROOT}/MaterialComponents/components/Dialogs/src/MaterialDialogs.bundle",
+				"${PODS_ROOT}/MaterialComponents/components/Tabs/src/MaterialTabs.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/MaterialComponents/MaterialIcons_ic_check_circle.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZplayMuteListener.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AtmosplayAds.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMobileAdsMediationTestSuite.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialDialogs.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialTabs.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons_ic_check_circle.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -222,7 +235,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B40FDCA2369745E002116BA /* RewardedVideoViewController.m in Sources */,
+				5B40FDCA2369745E002116BA /* RewardedVideoViewControllerLegacy.m in Sources */,
+				5B9EDC5223A8A9B900EED72E /* RewardedVideoController.m in Sources */,
 				C77A98B920887E8400840186 /* MainViewController.m in Sources */,
 				5B40FDCC2369745E002116BA /* BannerViewController.m in Sources */,
 				5B40FDCB2369745E002116BA /* InterstitialViewController.m in Sources */,
@@ -365,16 +379,16 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 20191101;
+				CURRENT_PROJECT_VERSION = 2019122003;
 				DEVELOPMENT_TEAM = QX37QM2334;
 				INFOPLIST_FILE = PlayableAdMobDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 2.6.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.PlayableAdMobDemo;
+				MARKETING_VERSION = 3.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.atmosplay.PlayableAdMobDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "a0f49df3-171d-4535-b30a-dd800ef8f012";
-				PROVISIONING_PROFILE_SPECIFIER = zplay;
+				PROVISIONING_PROFILE_SPECIFIER = atmosplay;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -387,16 +401,16 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 20191101;
+				CURRENT_PROJECT_VERSION = 2019122003;
 				DEVELOPMENT_TEAM = L5UE3EGW93;
 				INFOPLIST_FILE = PlayableAdMobDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 2.6.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.PlayableAdMobDemo;
+				MARKETING_VERSION = 3.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.atmosplay.PlayableAdMobDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "9f445f8f-ab1c-4958-b506-0257824d3d39";
-				PROVISIONING_PROFILE_SPECIFIER = Dis;
+				PROVISIONING_PROFILE_SPECIFIER = DisAtmosplay;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
